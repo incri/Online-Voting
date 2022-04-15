@@ -41,16 +41,3 @@ def vote(request, candidate_id):
 
 class LoginView(_LoginView):
     template_name = 'election/login.html'
-
-
-def api_candidate_list(request):
-    data = {
-        'candidates': [
-            {
-                'id': 1,
-                "name": 'Ram',
-                'Party': 'UML'
-            }
-        ]
-    }
-    return JsonResponse(data=data)
